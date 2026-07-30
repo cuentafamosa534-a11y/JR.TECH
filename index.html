@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JR TECH | Tecnología al mejor precio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!--================ HEADER ================-->
+
+<header>
+
+    <div class="logo">
+        JR TECH
+    </div>
+
+    <nav>
+
+        <a href="#">Inicio</a>
+
+        <a href="#productos">Productos</a>
+
+        <a href="#reseñas">Reseñas</a>
+
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+    <div id="cartBtn" class="cart-btn">
+
+        🛒
+        <span id="count">0</span>
+
+    </div>
+
+</header>
+
+<!--================ HERO ================-->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="tag">
+            ⚡ Tecnología Premium
+        </span>
+
+        <h1>
+
+            Todo lo que necesitas
+            para tu iPhone.
+
+        </h1>
+
+        <p>
+
+            Encuentra cargadores, AirPods,
+            cables, power banks y accesorios
+            con despacho a domicilio o entrega
+            en Metro.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button id="verProductos" class="btn-primary">
+
+                Comprar ahora
+
+            </button>
+
+            <a href="#productos" class="btn-secondary">
+
+                Ver catálogo
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="hero-card">
+
+            <span class="badge">
+                ⭐ Más vendido
+            </span>
+
+            <h2>
+
+                AirPods
+                Generación 2
+
+            </h2>
+
+            <p>
+
+                Sonido premium
+                • Bluetooth
+                • Estuche de carga
+
+            </p>
+
+            <h1>
+
+                $20.000
+
+            </h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ BENEFICIOS ================-->
+
+<section class="beneficios">
+
+    <div class="beneficio">
+
+        🚚
+
+        <h3>
+
+            Envíos
+
+        </h3>
+
+        <p>
+
+            A todo Santiago.
+
+        </p>
+
+    </div>
+
+    <div class="beneficio">
+
+        🚇
+
+        <h3>
+
+            Entrega Metro
+
+        </h3>
+
+        <p>
+
+            Coordinamos estación.
+
+        </p>
+
+    </div>
+
+    <div class="beneficio">
+
+        💳
+
+        <h3>
+
+            Pago Seguro
+
+        </h3>
+
+        <p>
+
+            Transferencia
+            o efectivo.
+
+        </p>
+
+    </div>
+
+    <div class="beneficio">
+
+        ⭐
+
+        <h3>
+
+            Garantía
+
+        </h3>
+
+        <p>
+
+            Atención rápida
+            por WhatsApp.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!--================ BUSCADOR ================-->
+
+<section class="search-section">
+
+    <input
+
+        id="search"
+
+        type="text"
+
+        placeholder="🔍 Buscar productos..."
+
+    >
+
+</section>
+
+<!--================ CATEGORÍAS ================-->
+
+<section class="categorias">
+
+    <button class="cat active">
+
+        Todos
+
+    </button>
+
+    <button class="cat">
+
+        Audífonos
+
+    </button>
+
+    <button class="cat">
+
+        Cargadores
+
+    </button>
+
+    <button class="cat">
+
+        Cables
+
+    </button>
+
+    <button class="cat">
+
+        Power Bank
+
+    </button>
+
+</section>
+
+<!--================ PRODUCTOS ================-->
+
+<section id="productos">
+
+    <h2 class="titulo">
+
+        Productos destacados
+
+    </h2>
+
+    <main id="products">
+
+    </main>
+
+</section>
+
+<!--================ CARRITO ================-->
+
+<aside id="cart" class="cart-panel hidden">
+
+    <div class="cart-header">
+
+        <h2>
+
+            🛒 Mi carrito
+
+        </h2>
+
+        <button id="closeCart">
+
+            ✖
+
+        </button>
+
+    </div>
+
+    <div
+        id="cartItems"
+        class="cart-items">
+
+    </div>
+
+    <div class="cart-footer">
+
+        <h3>
+
+            Total
+
+        </h3>
+
+        <h2>
+
+            $
+            <span id="total">
+
+                0
+
+            </span>
+
+        </h2>
+
+        <button id="checkout" class="btn-primary">
+
+            Finalizar compra
+
+        </button>
+
+    </div>
+
+</aside>
+<!--================ MODAL FINALIZAR COMPRA ================-->
+
+<div id="checkoutModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Finalizar compra</h2>
+
+            <button id="closeModal">✖</button>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>👤 Nombre completo</label>
+
+            <input type="text" id="customerName" placeholder="Ingresa tu nombre">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>📞 Teléfono</label>
+
+            <input type="tel" id="customerPhone" placeholder="+56 9 XXXX XXXX">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>🚚 Método de entrega</label>
+
+            <select id="deliveryType">
+
+                <option value="domicilio">🚚 Envío a domicilio</option>
+
+                <option value="metro">🚇 Entrega en Metro</option>
+
+            </select>
+
+        </div>
+
+        <div id="direccionBox">
+
+            <div class="form-group">
+
+                <label>📍 Dirección</label>
+
+                <input type="text" id="customerAddress">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>🏘️ Comuna</label>
+
+                <input type="text" id="customerCommune">
+
+            </div>
+
+        </div>
+
+        <div id="metroBox" style="display:none;">
+
+            <div class="form-group">
+
+                <label>🚇 Estación de Metro</label>
+
+                <input type="text" id="customerMetro">
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>📝 Observaciones</label>
+
+            <textarea id="customerNote" rows="4"
+                placeholder="Ej: Llamar al llegar, entregar después de las 18:00..."></textarea>
+
+        </div>
+
+        <button id="sendOrder" class="btn-primary">
+
+            Enviar pedido por WhatsApp
+
+        </button>
+
+    </div>
+
+</div>
+
+<!--================ RESEÑAS ================-->
+
+<section id="reseñas" class="reviews">
+
+    <h2>Lo que dicen nuestros clientes</h2>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+
+            ⭐⭐⭐⭐⭐
+
+            <p>
+
+                Excelente atención.
+                Llegó el mismo día.
+
+            </p>
+
+            <strong>Camila R.</strong>
+
+        </div>
+
+        <div class="review-card">
+
+            ⭐⭐⭐⭐⭐
+
+            <p>
+
+                Muy buena calidad.
+                Recomendado.
+
+            </p>
+
+            <strong>Matías P.</strong>
+
+        </div>
+
+        <div class="review-card">
+
+            ⭐⭐⭐⭐⭐
+
+            <p>
+
+                Muy rápido el despacho
+                y excelente comunicación.
+
+            </p>
+
+            <strong>Ignacio G.</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ FOOTER ================-->
+
+<footer id="contacto">
+
+    <h2>
+
+        JR TECH
+
+    </h2>
+
+    <p>
+
+        Tecnología al mejor precio.
+
+    </p>
+
+    <div class="footer-links">
+
+        <a href="https://wa.me/56949935461" target="_blank">
+
+            WhatsApp
+
+        </a>
+
+        <a href="https://instagram.com/jr.tech" target="_blank">
+
+            Instagram
+
+        </a>
+
+    </div>
+
+    <small>
+
+        © 2026 JR TECH · Todos los derechos reservados.
+
+    </small>
+
+</footer>
+
+<!--================ BOTÓN WHATSAPP ================-->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/56949935461"
+target="_blank">
+
+💬
+
+</a>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
